@@ -1,0 +1,34 @@
+# Create/update .gitignore
+cat > .gitignore << 'EOF'
+# Terraform state files - CONTAINS SECRETS!
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+
+# Terraform directories
+.terraform/
+.terraform.lock.hcl
+
+# Variable files with passwords
+*.tfvars
+terraform.tfvars
+
+# AWS credentials
+.aws/
+
+# SSH keys
+*.pem
+*.key
+terra-key*
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+EOF
